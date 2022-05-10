@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    background-color: rgb(75, 72, 72);
+}
+p{
+    margin: 12px;
+}
+p::after { 
+  white-space:after;
+  content: "\A		";
+  font-weight: bold;
+}
+div::first-letter {
+    white-space:pre;
+    content: "\A			";
+    font-weight: bold;
+    font-style: italic;
+    font-style: oblique;
+    font-size: 25px;
+    }
+
+    div:nth-of-type(2n) {
+        background: #bebcbc;
+    }
+    div:nth-of-type(2n+1) {
+        background: white;
+    }
+div{
+    margin: 36px;
+}
+    p2::after {
+        content:"...";
+    }
+
+a{
+    margin-left:  90%;
+   
+}
+/* Add animation (Chrome, Safari, Opera) */
+@-webkit-keyframes example {
+  from {top:-100px;opacity: 0;}
+  to {top:0px;opacity:1;}
+}
+
+/* Add animation (Standard syntax) */
+@keyframes example {
+  from {top:-100px;opacity: 0;}
+  to {top:0px;opacity:1;}
+}
+
+/* The modal's background */
+.modal {
+  display: none;
+  position: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: none;
+  background-color: rgb(3, 3, 3);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Display the modal when targeted */
+.modal:target {
+  display: table;
+  position: absolute;
+}
+
+/* La tabla y como se visualiza el modal */
+.modal-dialog {
+  display: -moz-marker;
+  vertical-align: middle;
+}
+
+/* Contenido del modal */
+.modal-dialog .modal-content {
+  margin: auto;
+  background-color: #ffee00;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  border: 1px rgb(119, 119, 119) solid;
+  text-align: justify;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  /* Pone la animacion*/
+  -webkit-animation-name: animacion; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 0.3s; /* Chrome, Safari, Opera */
+  animation-name: animacion;
+  animation-duration: 0.3s;
+}
+/*Boton de cerrar*/
+.cerrar {
+  text-decoration: italic;
+  float: right;
+  font-size: 35px;
+  font-weight: normal;
+  color: rgb(55, 12, 245);
+}
+/*Boton de cerrar estilos*/
+.cerrar:hover,.cerrar:focus {
+  color: #000;
+  text-decoration: navy;
+  cursor: crosshair;
+}
+/*Contenedor donde se le da formato y color*/
+.Contenedor {
+  padding: 2px 16px;
+  background-color: red;
+}
+/*Cabezera de la tabla*/
+header {
+  font-size: 20px;
+  color: rgb(218, 206, 40);
+}
+/*Pie de la tabla*/
+footer {
+  font-size: 16px;
+  color: rgb(62, 37, 207);
+}
+
+
+
+</style>
+</head>
+<body>
+
+<p3>Soldadito Marinero</p3>
+<div>
+    <p>Él camina despacito que las prisas no son buenas</p>
+    <p>En su brazo dobladita, con cuidado la chaqueta</p>
+    <p>Luego pasa por la calle dónde los chavales juegan</p>
+    <p2>Él también quiso ser niño pero le pilló la guerra</p2>
+</div>
+<br>
+<div>
+    <p>Soldadito marinero conociste a una sirena</p>
+    <p>De esas que dicen te quiero si ven la cartera llena</p>
+    <p>Escogiste a la más guapa y a la menos buena</p>
+    <p2>Sin saber como ha venido te ha cogido la tormenta</p2>
+</div>
+<br>
+    
+<div>
+    <p>Él quería cruzar los mares y olvidar a su sirena</p>
+    <p>La verdad, no fue difícil cuando conoció a Mariela</p>
+    <p>Que tenía los ojos verdes y un negocio entre las piernas</p>
+    <p2>Hay que ver que puntería, no te arrimas a una buena</p2>
+</div>
+<br>
+
+<div>
+    <p>Soldadito marinero conociste a una sirena</p>
+    <p>De esas que dicen te quiero si ven la cartera llena</p>
+    <p>Escogiste la más guapa y a la menos buena</p>
+    <p2>Sin saber como ha venido te ha cogido la tormenta</p2>
+</div>
+<br>
+   
+<div>
+    <p>Después de un invierno malo, una mala primavera</p>
+    <p>Dime por que estas buscando una lágrima en la arena</p>
+    <p2>Después de un invierno malo</p2>
+</div>
+<br>
+<a href="#id01">Hola abre el modal</a>
+
+<div id="id01" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <header class="Contenedor">
+        <a href="#" class="cerrar">cerrar</a>
+        <h2>Fuente: https://www.letras.com/fito-fitipaldis/614056/
+        </h2>
+      </header>
+      <div class="Contenedor">
+        <p>Hola esta es la banderita española.</p>
+      </div>
+      <footer class="Contenedor">
+        <p>Fito y Fitipaldis
+        </p>
+      </footer>
+    </div>
+  </div>
+</div>
+<p3>
+<br>
+</p3>
+</body>
+</html>
